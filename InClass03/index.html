@@ -9,17 +9,45 @@
             /* border-style: solid;
             border-color: blue; */
             border: 10px solid blue;
+            border-radius: 20px;
+            border-color: #00FFFF;
+            background-color: #003333;
+            
         }
         .sport { color: red; }
         #tabletop { color: green; }
+        .border1 {
+            border-color: black;
+            border-width: 2px;
+            padding: 40px 20px 40px 20px;
+            margin: 40px 20px 40px 20px;
+            box-shadow: 15px 15px 5px purple;
+            height: 300px;
+            background-image: url("bg.jpg");
+        }
+        .border2 {
+            border-color: black;
+            border-width: 2px;
+            padding: 40px 20px 40px 20px;
+            margin: 40px 20px 40px 20px;
+            box-shadow: 15px 15px 0px purple;
+            height: 300px;
+            background-image: url("bg.png");
+            background-repeat: no-repeat;
+        }
         </style>
     </head>
     <body>
         <!-- inline CSS -->
+        <p class="border1">I like the html box model.</p>
+        <p class="border2">html box model.</p>
+
         <p style="color:orange; font-weight:bold;">I like programming!</p>
         <p style="margin: 40px; padding: 10px;">I love technology!</p>
         <p class="sport" style="margin: 10px; padding: 40px;">I like dirt bikes!</p>
         <p class="sport">I love soccer!</p>
         <p id="tabletop">I like 40k!</p>
+        <span style="width: 70%; "><p style="background-color:yellow;height: 200px;"></p></span>
+        <span style="width: 25%; "><p style="background-color:red; height: 200px;"></p></span>
     </body>
 </html>
