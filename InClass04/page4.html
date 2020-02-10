@@ -2,8 +2,32 @@
 <html>
 <head>
     <title>Page 4</title>
+    <style>
+        nav#nav1150 ul {
+            display: block;
+            color: blue;
+        }
+        nav#nav1150 ul li ul {
+            display: none;
+            color: green;
+        }
+        nav#nav1150 ul li:hover > ul {
+            display: block;
+        }
+
+    </style>
 </head>
+
 <body>
 <h1>Page 4</h1>
+<nav id="nav1150">
+    <ul>
+        <li>top menu
+            <ul>
+                <li>level 2 menu</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 </body>
 </html>
