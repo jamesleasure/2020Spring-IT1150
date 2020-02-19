@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+
+        <form method="POST" action="https://www.w3schools.com/action_page.php">
+            <input type="hidden" id="studentid" name="studentid" value="s01">
+            Name<br>
+            <input type="text" id="firstname" name="firstname" required autofocus>
+            <br><br>
+            Last Name<br>
+            <input type="text" id="lastname" name="lastname" required>
+            <br><br>
+            Password<br>
+            <input type="password" id="pwd" name="pwd" required><br><br>
+            Major<br>
+            <input type="radio" name="major" value="netsoft">Networking Software<br>
+            <input type="radio" name="major" value="security">Cybersecurity<br>
+            <input type="radio" name="major" value="prog" checked>Programming & Development<br>
+            <input type="radio" name="major" value="bussol">Business Solutions<br><br><br>
+            Experience<br>
+            <input type="checkbox" name="html" checked>html<br>
+            <input type="checkbox" name="css" checked>CSS<br>
+            <input type="checkbox" name="javascript">JavaScript<br>
+            <input type="checkbox" name="php">PHP<br>
+            <br><br>
+            Favorite Pizza Toppins<br>
+            <select id="toppings" name="toppings" multiple size="5">
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="meatball">Meatballs</option>
+                    <option value="greenolives">Green Olives</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="blackolives">Black Olives</option>
+                    <option value="pineapple">Pineapple</option>
+            </select>
+
+            <br><br>
+            Agree to Terms<br>
+            <input type="checkbox" name="useragreenment" required>By checking this box I agree.
+            <br><br>
+            <input type="submit" value="Submit the Form!">&nbsp;<input type="reset">
+        </form>
+    </body>
+</html>
