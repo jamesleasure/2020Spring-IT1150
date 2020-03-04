@@ -5,9 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+#printname { display: none; }
+#onlinename { color: white; font-weight: bold; font-size: 40px; font-family: 'Anton'; }
+</style>
+<style media="print">
+#avatar { display: none; }
+#column1 { page-break-after: always; }
+footer { display: none; }
+#printname { display: block; font-family: 'Anton'; }
+#onlinename { display: none; }
 </style>
 <body class="w3-light-grey">
 
@@ -19,15 +29,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   
     <!-- Left Column -->
     <div class="w3-third">
-    
+    <h1 id="printname">Jane Doe</h1>
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="avatar.jpg" style="width:100%" alt="Avatar">
+          <img src="avatar.jpg" id="avatar" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Jane Doe</h2>
+            <h2 id="onlinename">Jane Doe</h2>
           </div>
         </div>
-        <div class="w3-container">
+        <div class="w3-container" id="column1">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Developer, Designer</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>

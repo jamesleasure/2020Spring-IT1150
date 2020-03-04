@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        input[type=text]:focus {
+            background-color: lightgoldenrodyellow;
+        }
+        #calculator {
+            display: grid;
+            grid-template-columns: repeat(5,2%);
+            grid-template-rows: 20px 30px 20px 30px 5px 30px;
+            grid-gap: 5px;
+            grid-template-areas: 
+                "a a a a a"
+                "b b b b b"
+                "c c c c c"
+                "d d d d d"
+                "j j j j j"
+                "e f g h i"
+                "k k k k k"
+                "l l l l l"
+                "m m m m m";
+        }
+        button {
+            border: 1px solid green;
+            color: green;
+            text-align: center;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input {
+            border: 1px solid green;
+            color: green;
+            text-align: center;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .label1 { grid-area: a; }
+        .label2 { grid-area: c; }
+        #operand1 { grid-area: b; }
+        #operand2 { grid-area: d; }
+        .spacer { grid-area: j; }
+        .spacer2 { grid-area: k; }
+        .label3 { grid-area: l; }
+        .results { grid-area: m; }
+        .label1, .label2, #label3 {
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <span id="calculator">
+        <span class="label1">Operand 1</span>
+        <input type="text" id="operand1" name="operand1"> 
+        <span class="label2">Operand 2</span>
+        <input type="text" id="operand2" name="operand2">
+        <span class="spacer">&nbsp;</span>
+        <button>&divide;</button>
+        <button>x</button>
+        <button>-</button>
+        <button>+</button>
+        <button>%</button>
+        <span class="spacer2">&nbsp;</span>
+        <span id="label3">Results</span>
+        <span class="results"> </span>
+
+        </span>
+    </body>
+</html>
