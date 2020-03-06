@@ -8,7 +8,7 @@
         }
         #calculator {
             display: grid;
-            grid-template-columns: repeat(5,2%);
+            grid-template-columns: repeat(5,5%);
             grid-template-rows: 20px 30px 20px 30px 5px 30px;
             grid-gap: 5px;
             grid-template-areas: 
@@ -27,9 +27,10 @@
             color: green;
             text-align: center;
             display: inline-block;
-            font-size: 14px;
+            font-size: 1em;
             cursor: pointer;
             border-radius: 50%;
+            padding: 0 0 0 0;
         }
         input {
             border: 1px solid green;
@@ -51,6 +52,43 @@
             font-weight: bold;
         }
         </style>
+        <script>
+        function divide() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var result = operand1 / operand2;
+            document.getElementById("results").innerHTML = result;
+        }
+
+        function multiply() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var result = operand1 * operand2;
+            document.getElementById("results").innerHTML = result;
+        }
+
+        function add() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var result = Number(operand1) + Number(operand2);
+            var result2 = operand1 + operand2;
+            document.getElementById("results").innerHTML = "<br> " + result + "<br>" + result2;
+        }
+
+        function subtract() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var result = Number(operand1) - Number(operand2);
+            document.getElementById("results").innerHTML = result;
+        }
+
+        function modulus() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var result = Number(operand1) % Number(operand2);
+            document.getElementById("results").innerHTML = result;
+        }
+        </script>
     </head>
     <body>
         <span id="calculator">
@@ -59,14 +97,14 @@
         <span class="label2">Operand 2</span>
         <input type="text" id="operand2" name="operand2">
         <span class="spacer">&nbsp;</span>
-        <button>&divide;</button>
-        <button>x</button>
-        <button>-</button>
-        <button>+</button>
-        <button>%</button>
+        <button onclick="divide()">&divide;</button>
+        <button onclick="multiply()">x</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="add()">+</button>
+        <button onclick="modulus()">%</button>
         <span class="spacer2">&nbsp;</span>
-        <span id="label3">Results</span>
-        <span class="results"> </span>
+        <span id="label3">Results</span><span></span>
+        <span id="results"> </span>
 
         </span>
     </body>
